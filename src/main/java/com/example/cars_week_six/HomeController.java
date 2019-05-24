@@ -86,7 +86,7 @@ public class HomeController {
     @PostMapping("/process")
     public String processForm(@Valid Category category, BindingResult result){
         if (result.hasErrors()){
-            return "Catform";
+            return "addCategory";
         }
         categoryRepo.save(category);
         return "redirect:/";
