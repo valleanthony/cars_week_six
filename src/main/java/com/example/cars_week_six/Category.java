@@ -11,7 +11,7 @@ public class Category {
 
     private String categoryName;
 
-    @OneToMany(mappedBy = "Category", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
     private Set<Cars> cars;
 
     public Category() {
