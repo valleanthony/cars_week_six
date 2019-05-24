@@ -65,6 +65,7 @@ public class HomeController {
     @RequestMapping("/update/car/{id}")
     public String updateCar(@PathVariable("id") long id, Model model){
         model.addAttribute("car",carsRepo.findById(id).get());
+        model.addAttribute("category", categoryRepo.findAll());
         return "carForm";
     }
 
