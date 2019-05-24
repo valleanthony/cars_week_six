@@ -27,8 +27,10 @@ public class HomeController {
     @RequestMapping("/") //This page will display all the cars uploaded by clients
     public String home(Model model) {
         model.addAttribute("cars", carsRepo.findAll());
+        model.addAttribute("category",categoryRepo.findAll());
         return "index";
     }
+
 
     // This section is for all cars being made.
     @GetMapping("/AddCar")
