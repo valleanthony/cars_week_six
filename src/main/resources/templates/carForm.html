@@ -36,7 +36,12 @@
     Year: <input type="text" th:field="*{year}"/><br/>
     MSRP: <input type="text" th:field="*{MSRP}"/><br/>
     Category: <br/>
-    <!-- need to make a dropdown -->
+    <select name="category" id="category" class="customer-select" th:field="*{category}">
+    <option th:each="co : ${category}"
+            th:value="${co.id}"
+            th:text="${co.categoryName}">
+    </option><br/>
+    </select><br/><br/>
 
 
 
